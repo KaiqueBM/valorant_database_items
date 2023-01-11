@@ -1,0 +1,83 @@
+        .sprays img,
+        .cards img,
+        .chaveiros img {
+            max-width: 100%;
+            background-color: #cecece;
+            border-start-start-radius: 10px;
+            border-start-end-radius: 10px;
+            margin-left: auto;
+            margin-right: auto;
+            display: flex;
+            justify-content: center;
+        }
+        
+        .sprays {
+            border-radius: 10px;
+        }
+        
+        .mapas:hover {
+            transform: scale(1.1);
+        }
+        
+        .mapas {
+            transition: ease 0.3s;
+        }
+        
+        .mapas p {
+            font-size: 30px;
+            font-weight: bold;
+            color: black;
+            background-color: rgb(231, 231, 231);
+            border-end-start-radius: 10px;
+            border-end-end-radius: 10px;
+            border-bottom: 5px solid #94003e;
+            text-transform: uppercase;
+        }
+        
+        .sprays p,
+        .cards p,
+        .chaveiros p,
+        .bundles p {
+            padding: 10px 0px;
+            font-size: 15px;
+            font-weight: bold;
+            color: black;
+            background-color: rgb(231, 231, 231);
+            border-end-start-radius: 10px;
+            border-end-end-radius: 10px;
+            border-bottom: 5px solid #94003e;
+            text-transform: uppercase;
+        }
+        
+        .bundles img {
+            max-width: 100%;
+            background-color: #cecece;
+            border-start-start-radius: 10px;
+            border-start-end-radius: 10px;
+        }
+        
+        .mapas span {
+            font-size: 20px;
+            font-weight: bold;
+            color: rgb(77, 77, 77);
+        }
+        
+        .mapas img {
+            width: 100%;
+            margin: 0px;
+            border-start-start-radius: 10px;
+            border-start-end-radius: 10px;
+        }
+        
+        .mobile {
+            display: none;
+        }
+        
+        @media (max-width: 992px) {
+            .web {
+                display: none;
+            }
+            .mobile {
+                display: flex;
+            }
+        }
