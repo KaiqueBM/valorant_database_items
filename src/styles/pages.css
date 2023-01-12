@@ -15,11 +15,17 @@
             border-radius: 10px;
         }
         
-        .mapas:hover {
-            transform: scale(1.1);
+        .mapas:hover,
+        .cards:hover,
+        .sprays:hover,
+        .bundles:hover {
+            transform: scale(1.05);
         }
         
-        .mapas {
+        .mapas,
+        .cards,
+        .sprays,
+        .bundles {
             transition: ease 0.3s;
         }
         

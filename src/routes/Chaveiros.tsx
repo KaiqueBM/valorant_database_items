@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-import '../styles/sprays.css'
+import '../styles/pages.css'
 
 const Chaveiros = () => {
 
@@ -12,10 +12,10 @@ const Chaveiros = () => {
 
     const getChaveiros = async () => {
         try {
-            const response = await axios.get("http://localhost:3000/chaveiros")
+            const response = await axios.get("https://valorant-api.com/v1/buddies")
             const data = response.data;
             console.log(data)
-            setChaveiros(data)
+            setChaveiros(data.data)
 
         } catch (error) {
             console.log(error)
@@ -35,7 +35,7 @@ const Chaveiros = () => {
                 {chaveiros.length === 0 ? (<p>Carregando...</p>) : (
                     chaveiros.map((bundle: { uuid: string, displayName: string, displayIcon: string }) => (
                         <div className="col-lg-2 col-12 m-2 chaveiros" key={bundle.uuid}>
-                            <img src={bundle.displayIcon} />
+                            <img  height="250px" className="w-100" src={bundle.displayIcon} />
                             <p className="text-center">{bundle.displayName}</p>
                             
                         </div>

@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-import '../styles/sprays.css'
+import '../styles/pages.css'
 
 const Sprays = () => {
 
@@ -12,10 +12,10 @@ const Sprays = () => {
 
     const getSprays = async () => {
         try {
-            const response = await axios.get("http://localhost:3000/sprays")
+            const response = await axios.get("https://valorant-api.com/v1/sprays")
             const data = response.data;
-            console.log(data)
-            const data_filter = data.filter(filter_imgs);
+            console.log(data.data)
+            const data_filter = data.data.filter(filter_imgs);
             setSprays(data_filter)
 
         } catch (error) {

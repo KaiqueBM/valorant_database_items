@@ -42,10 +42,6 @@ const router = createBrowserRouter([
         path: "/cards",
         element: <Cards />
       },
-      {
-        path: "/new",
-        element: <NewPost />
-      },
     ]
   }
 ])

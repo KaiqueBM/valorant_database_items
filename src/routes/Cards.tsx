@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-import '../styles/sprays.css'
+import '../styles/pages.css'
 
 const Cards = () => {
 
@@ -12,10 +12,10 @@ const Cards = () => {
 
     const getCards = async () => {
         try {
-            const response = await axios.get("http://localhost:3000/cards")
+            const response = await axios.get("https://valorant-api.com/v1/playercards")
             const data = response.data;
             console.log(data)
-            setCards(data)
+            setCards(data.data)
 
         } catch (error) {
             console.log(error)

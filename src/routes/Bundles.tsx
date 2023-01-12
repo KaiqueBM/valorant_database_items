@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-import '../styles/sprays.css'
+import '../styles/pages.css'
 
 const Bundles = () => {
 
@@ -12,10 +12,12 @@ const Bundles = () => {
 
     const getBundles = async () => {
         try {
-            const response = await axios.get("http://localhost:3000/bundles")
+            const response = await axios.get("https://valorant-api.com/v1/bundles")
             const data = response.data;
             console.log(data)
-            setBundles(data)
+
+            const data_filter = data.data.filter(filter_imgs);
+            setBundles(data_filter)
 
         } catch (error) {
             console.log(error)
@@ -25,6 +27,12 @@ const Bundles = () => {
     useEffect(() => {
         getBundles();
     }, [])
+
+    function filter_imgs(props: any) {
+        if (props.verticalPromoImage != null) {
+            return props
+        }
+    }
 
 
 

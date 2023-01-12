@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-import '../styles/sprays.css'
+import '../styles/pages.css'
 
 const Mapas = () => {
 
@@ -12,10 +12,10 @@ const Mapas = () => {
 
     const getNapas = async () => {
         try {
-            const response = await axios.get("http://localhost:3000/maps")
+            const response = await axios.get("https://valorant-api.com/v1/maps")
             const data = response.data;
-            console.log(data)
-            setNapas(data)
+            console.log(data.data)
+            setNapas(data.data)
 
         } catch (error) {
             console.log(error)
