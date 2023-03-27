@@ -2,7 +2,6 @@ import React from "react";
 import {useState, useEffect} from "react";
 import {Link} from "react-router-dom";
 import axios from "axios";
-import 'bootstrap/dist/css/bootstrap.min.css';
 
 import icon from '../assets/icon.png'
 import icon1 from '../assets/largeart.png'
