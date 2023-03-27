@@ -5,16 +5,15 @@ import '../styles/pages.css'
 
 const Agentes = () => {
 
-    const [bundles, setBundles] = useState([])
+    const [agentesHero, setAgentesHero] = useState([])
 
-    const getBundles = async () => {
+    const getAgentesHero = async () => {
         try {
-            const response = await api.get("/bundles?language=pt-BR")
+            const response = await api.get("/agents?language=pt-BR")
             const data = response.data;
-            console.log(data)
-
-            const data_filter = data.data.filter(filter_imgs);
-            setBundles(data_filter)
+            console.log(data.data)
+			const data_filter = data.data.filter(filter_imgs);
+			setAgentesHero(data_filter)
 
         } catch (error) {
             console.log(error)
@@ -22,27 +21,30 @@ const Agentes = () => {
     }
 
     useEffect(() => {
-        getBundles();
+        getAgentesHero();
     }, [])
 
-    function filter_imgs(props: any) {
-        if (props.verticalPromoImage != null) {
+	function filter_imgs(props: any) {
+        if (props.background != null) {
             return props
         }
-    }
+	}
+
 
 
 
     return (
-        <div className="container-fluid">
-            <div className="title text-center m-5">BUNDLES</div>
+        <div className="">
+            <div className="title text-center m-5">AGENTES</div>
             <div className="flex flex-row flex-wrap justify-center">
-                {bundles.length === 0 ? (<p>Carregando...</p>) : (
-                    bundles.map((bundle: { uuid: string, displayName: string, verticalPromoImage: string, displayIcon: string }) => (
-                        <div className="bundles m-5" key={bundle.uuid}>
-                            <img className="web" width="320px" height="452px" src={bundle.verticalPromoImage} />
-                            <img className="mobile" src={bundle.displayIcon} />
-                            <p className="text-center">{bundle.displayName}</p>
+                {agentesHero.length === 0 ? (<p>Carregando...</p>) : (
+                    agentesHero.map((agent) => (
+                        <div className="w-3/12" key={agent.uuid}>
+							<img src={agent.background} width="80%" className="mx-auto opacity-90"  />
+							<div className="relative"> 
+                            <img className="web absolute bottom-10" src={agent.bustPortrait} />
+                            <p className="text-center">{agent.displayName}</p>
+							</div>
                             
                         </div>
                     ))
