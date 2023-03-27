@@ -1,11 +1,9 @@
-import React from "react";
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
 import api from "../axios/config";
 
 import '../styles/pages.css'
 
-const Bundles = () => {
+const Agentes = () => {
 
     const [bundles, setBundles] = useState([])
 
@@ -54,4 +52,4 @@ const Bundles = () => {
     )
 };
 
-export default Bundles;
+export default Agentes;
