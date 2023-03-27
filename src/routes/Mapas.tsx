@@ -28,12 +28,12 @@ const Mapas = () => {
 
 
     return (
-        <div className="container-fluid">
+        <div className="">
             <div className="title text-center m-5">MAPAS</div>
-            <div className="row d-flex justify-content-center">
+            <div className="flex flex-row flex-wrap justify-center w-full">
                 {mapas.length === 0 ? (<p>Carregando...</p>) : (
                     mapas.map((mapa: { uuid: string, displayName: string, splash: string, coordinates: string }) => (
-                        <div className="col-5 m-2 mapas" key={mapa.uuid}>
+                        <div className="m-5 mapas  w-5/12" key={mapa.uuid}>
                             <img className="" src={mapa.splash} />
                             <p className="text-center pb-2 pt-2">{mapa.displayName} <span className="text-center mb-3"> - {mapa.coordinates}</span></p>
                         </div>

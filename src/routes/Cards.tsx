@@ -30,11 +30,11 @@ const Cards = () => {
     return (
         <div className="container">
             <div className="title text-center m-5">CARDS</div>
-            <div className="row d-flex justify-content-center">
+            <div className="flex flex-row flex-wrap justify-center w-full">
                 {cards.length === 0 ? (<p>Carregando...</p>) : (
                     cards.map((bundle: { uuid: string, displayName: string, largeArt: string }) => (
-                        <div className="col-lg-2 col-5 cards" key={bundle.uuid}>
-                            <img src={bundle.largeArt} />
+                        <div className="m-5 cards w-2/12" key={bundle.uuid}>
+                            <img className="w-full" src={bundle.largeArt} />
                             <p className="text-center">{bundle.displayName}</p>
                             
                         </div>

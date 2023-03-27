@@ -28,13 +28,13 @@ const Chaveiros = () => {
 
 
     return (
-        <div className="container-fluid">
+        <div className="">
             <div className="title text-center m-5">CHAVEIROS</div>
-            <div className="row d-flex justify-content-center">
+            <div className="flex flex-row flex-wrap justify-center w-full">
                 {chaveiros.length === 0 ? (<p>Carregando...</p>) : (
                     chaveiros.map((bundle: { uuid: string, displayName: string, displayIcon: string }) => (
-                        <div className="col-lg-2 col-12 m-2 chaveiros" key={bundle.uuid}>
-                            <img  height="250px" className="w-100" src={bundle.displayIcon} />
+                        <div className="m-5 chaveiros  w-2/12" key={bundle.uuid}>
+                            <img className="w-full h-60 p-5" src={bundle.displayIcon} />
                             <p className="text-center">{bundle.displayName}</p>
                             
                         </div>
