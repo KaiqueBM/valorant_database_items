@@ -1,37 +1,32 @@
 import {Link} from 'react-router-dom'
 
-import '../styles/navbar.css'
-
 const Navbar = () => {
     return (
-        <nav className="navbar p-3">
-            <h2>
-                <Link to={`/`} className="logo">Valorant</Link>
-            </h2>
-            <ul>
-                <li>
-                    <Link to={`/`}>Home</Link>
+        <nav className="p-3 font-raj text-bold border-b-4 border-b-verm">
+            <ul className='flex flex-row justify-center'>
+                <li className='mx-5'>
+                    <Link to={`/`} className="font-raj font-bold text-2xl">Home</Link>
                 </li>
-                <li>
-                    <Link to={`/agentes`}>Agentes</Link>
+                <li className='mx-5'>
+                    <Link to={`/agentes`} className="font-raj font-bold text-2xl">Agentes</Link>
                 </li>
-                <li>
-                    <Link to={`/mapas`}>Mapas</Link>
+                <li className='mx-5'>
+                    <Link to={`/mapas`} className="font-raj font-bold text-2xl">Mapas</Link>
                 </li>
-                <li>
-                    <Link to={`/bundles`}>Bundles</Link>
+                <li className='mx-5'>
+                    <Link to={`/bundles`} className="font-raj font-bold text-2xl">Bundles</Link>
                 </li>
-                <li>
-                    <Link to={`/sprays`}>Armas</Link>
+                <li className='mx-5'>
+                    <Link to={`/sprays`} className="font-raj font-bold text-2xl">Armas</Link>
                 </li>
-                <li>
-                    <Link to={`/cards`}>Cards</Link>
+                <li className='mx-5'>
+                    <Link to={`/cards`} className="font-raj font-bold text-2xl">Cards</Link>
                 </li>
-                <li>
-                    <Link to={`/chaveiros`}>Chaveiros</Link>
+                <li className='mx-5'>
+                    <Link to={`/chaveiros`} className="font-raj font-bold text-2xl">Chaveiros</Link>
                 </li>
-                <li>
-                    <Link to={`/sprays`}>Sprays</Link>
+                <li className='mx-5'>
+                    <Link to={`/sprays`} className="font-raj font-bold text-2xl">Sprays</Link>
                 </li>
             </ul>
         </nav>

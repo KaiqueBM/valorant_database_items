@@ -5,7 +5,16 @@ module.exports = {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        'vava': '#ece8e1',
+        'verm': '#ff4655',
+      },
+      fontFamily: {
+        raj: 'Rajdhani',
+        fira: 'Fira Sans'      
+      }
+    },
   },
   plugins: [],
 }
