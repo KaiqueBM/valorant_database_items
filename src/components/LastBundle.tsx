@@ -32,7 +32,7 @@ const LastBundle = () => {
       <div className="flex flex-row justify-center"></div>
 
       <div className="flex flex-col py-12">
-        <div className="flex flex-row items-end justify-center border-4 h-full">
+        <div className="flex flex-row items-end justify-center h-full">
           {weaponAtual.length === 0 ? (
             <p>Carregando...</p>
           ) : (
