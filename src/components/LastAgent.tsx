@@ -71,6 +71,11 @@ const LastAgent = () => {
           )}
         </div>
       </div>
+      <div className="flex flex-row flex-wrap justify-center -mt-10 pb-28">
+          <button className="bg-vava px-10 py-4 font-raj font-semibold text-2xl rounded-lg">
+            VER MAIS AGENTES
+          </button>
+        </div>
     </div>
   );
 };

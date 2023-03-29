@@ -10,7 +10,6 @@ const LastMap = () => {
         "/maps/2fe4ed3a-450a-948b-6d6b-e89a78e680a9?language=pt-BR"
       );
       const data = response.data;
-      console.log(data.data);
       setMapaAtual(data.data);
     } catch (error) {
       console.log(error);
@@ -22,7 +21,7 @@ const LastMap = () => {
   }, []);
 
   return (
-    <div className="pt-12">
+    <div className="py-16">
       {mapaAtual.length === 0 ? (
         <p>Carregando...</p>
       ) : (
@@ -41,6 +40,11 @@ const LastMap = () => {
 				<img className="mx-auto mt-8 rounded-lg" src={mapaAtual.splash} />
 			</div>
 		</div>
+		<div className="flex flex-row flex-wrap justify-center -mt-10 pb-28">
+          <button className="bg-vava px-10 py-4 font-raj font-semibold text-2xl rounded-lg">
+            VER MAIS MAPAS
+          </button>
+        </div>
         </>
       )}
     </div>

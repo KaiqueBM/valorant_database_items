@@ -2,9 +2,11 @@ import React from "react";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import api from "../axios/config";
+import Footer from "../components/Footer";
 import LastAgent from "../components/LastAgent";
 import LastBundle from "../components/LastBundle";
 import LastMap from "../components/LastMap";
+import Rank from "../components/Rank";
 import "../styles/home.css";
 
 const Home = () => {
@@ -25,7 +27,6 @@ const Home = () => {
       const data1 = response1.data;
       const data2 = response2.data;
       const data_filter = data1.data.filter(filter_weapon);
-      console.log(data2.data);
       setBundleAtual(data.data);
       setWeaponAtual(data_filter);
       setAgenteAtual(data2.data);
@@ -66,6 +67,10 @@ const Home = () => {
       <LastAgent />
 
       <LastMap />
+
+      <Rank />
+
+      <Footer />
     </>
   );
 };
