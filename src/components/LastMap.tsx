@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import api from "../axios/config";
 
 const LastMap = () => {
-  const [mapaAtual, setMapaAtual] = useState([]);
+  const [mapaAtual, setMapaAtual] = useState<any>([]);
 
   const getMapaAtual = async () => {
     try {

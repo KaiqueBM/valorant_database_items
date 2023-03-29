@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import api from "../axios/config";
 
 const LastBundle = () => {
-  const [weaponAtual, setWeaponAtual] = useState([]);
+  const [weaponAtual, setWeaponAtual] = useState<any>([]);
 
   const getWeaponAtual = async () => {
     try {
@@ -35,7 +35,7 @@ const LastBundle = () => {
           {weaponAtual.length === 0 ? (
             <p>Carregando...</p>
           ) : (
-            weaponAtual.map((weapon) => (
+            weaponAtual.map((weapon: any) => (
               <div className="p-5 " key={weapon.uuid}>
                 <img className="h-20 mx-auto" src={weapon.displayIcon} />
                 <p className="text-center text-black font-fira text-xl">

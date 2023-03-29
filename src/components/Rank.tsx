@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import api from '../axios/config';
 
 const Rank = () => {
-	const [rankAtual, setRankAtual] = useState([]);
+	const [rankAtual, setRankAtual] = useState<any>([]);
 
   const getRankAtual = async () => {
     try {
@@ -40,7 +40,7 @@ const Rank = () => {
       </div>
 
 	  <div className='md:flex md:flex-row md:flex-wrap grid sm:grid-cols-3 grid-cols-2 justify-center gap-4 py-10 md:px-10'>
-		{rankAtual.map((rank, index)=>(
+		{rankAtual.map((rank:any, index:any)=>(
 			<div key={index}>
 				<img src={rank.largeIcon} />
 				<p className='text-2xl text-center p-10 text-black font-fira'>{rank.divisionName}</p>

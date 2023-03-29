@@ -4,8 +4,8 @@ import dayjs from 'dayjs'
 
 const Footer = () => {
 
-	const [versionAtual, setVersionAtual] = useState([]);
-	const [seasons, setSeasons] = useState([]);
+	const [versionAtual, setVersionAtual] = useState<any>([]);
+	const [seasons, setSeasons] = useState<any>([]);
 
   const getVersionAtual = async () => {
     try {
@@ -58,7 +58,7 @@ const Footer = () => {
 		  <button className="bg-verm px-10 py-4 font-raj font-semibold text-2xl rounded-lg mx-5 my-5">
             SITE OFICIAL DO VALORANT
           </button>
-          <button className="bg-vava px-10 py-4 font-raj font-semibold text-2xl rounded-lg mx-5 my-5 my-5">
+          <button className="bg-vava px-10 py-4 font-raj font-semibold text-2xl rounded-lg mx-5 my-5">
             REPOSITÓRIO
           </button>
 		  <button className="bg-vava px-10 py-4 font-raj font-semibold text-2xl rounded-lg mx-5 my-5">

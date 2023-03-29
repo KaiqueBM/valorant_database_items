@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import api from "../axios/config";
 
 const LastAgent = () => {
-  const [agenteAtual, setAgenteAtual] = useState([]);
+  const [agenteAtual, setAgenteAtual] = useState<any>([]);
 
   const getAgenteAtual = async () => {
     try {
@@ -60,7 +60,7 @@ const LastAgent = () => {
               </div>
 
               <div className="flex sm:flex-row flex-col w-full sm:justify-between justify-center">
-                {agenteAtual.abilities.map((abilidades, index) => (
+                {agenteAtual.abilities.map((abilidades: any, index: any) => (
                   <div className="pt-10" key={index}>
                     <img className="mx-auto" src={abilidades.displayIcon} />
                     <div className="text-center">{abilidades.displayName}</div>
