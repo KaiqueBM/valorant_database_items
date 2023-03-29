@@ -4,7 +4,7 @@ import api from "../axios/config";
 import "../styles/pages.css";
 
 const Agentes = () => {
-  const [agentesHero, setAgentesHero] = useState([]);
+  const [agentesHero, setAgentesHero] = useState<any>([]);
 
   const getAgentesHero = async () => {
     try {
@@ -35,7 +35,7 @@ const Agentes = () => {
         {agentesHero.length === 0 ? (
           <p>Carregando...</p>
         ) : (
-          agentesHero.map((agent) => (
+          agentesHero.map((agent:any) => (
             <div className="w-3/12" key={agent.uuid}>
               <img
                 src={agent.background}
