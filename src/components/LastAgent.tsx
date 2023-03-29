@@ -35,7 +35,7 @@ const LastAgent = () => {
               <img
                 src={agenteAtual.background}
                 width="100%"
-                className="mx-auto opacity-90 -mt-28"
+                className="mx-auto opacity-90 -mt-24"
               />
               <div className="relative">
                 <img

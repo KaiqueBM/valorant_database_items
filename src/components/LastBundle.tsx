@@ -20,7 +20,7 @@ const LastBundle = () => {
   }, []);
 
   function filter_weapon(props: any) {
-    if (props.themeUuid === "a547897d-4bd4-7c77-f5e6-55973f0e89ef") {
+    if (props.themeUuid === "537e0587-416c-f8f3-965c-bba3508156d7") {
       return props;
     }
   }
@@ -32,13 +32,13 @@ const LastBundle = () => {
       <div className="flex flex-row justify-center"></div>
 
       <div className="flex flex-col py-12">
-        <div className="flex flex-row items-end justify-center h-full">
+        <div className="grid grid-cols-5 gap-2 items-end  h-full">
           {weaponAtual.length === 0 ? (
             <p>Carregando...</p>
           ) : (
             weaponAtual.map((weapon) => (
-              <div className="p-5" key={weapon.uuid}>
-                <img className="h-20" src={weapon.displayIcon} />
+              <div className="p-5 " key={weapon.uuid}>
+                <img className="h-20 mx-auto" src={weapon.displayIcon} />
                 <p className="text-center text-black font-fira text-xl">
                   {weapon.displayName}
                 </p>

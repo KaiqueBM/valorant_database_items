@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import api from "../axios/config";
 import LastAgent from "../components/LastAgent";
 import LastBundle from "../components/LastBundle";
+import LastMap from "../components/LastMap";
 import "../styles/home.css";
 
 const Home = () => {
@@ -63,6 +64,8 @@ const Home = () => {
       <LastBundle />
 
       <LastAgent />
+
+      <LastMap />
     </>
   );
 };
