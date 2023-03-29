@@ -14,6 +14,7 @@ import Chaveiros from './routes/Chaveiros';
 import './styles/index.css'
 import './index.css'
 import Agentes from './routes/Agentes';
+import Armas from './routes/Armas';
 
 const router = createBrowserRouter([
   {
@@ -46,6 +47,10 @@ const router = createBrowserRouter([
       {
         path: "/agentes",
         element: <Agentes />
+      },
+      {
+        path: "/armas",
+        element: <Armas />
       },
     ]
   }

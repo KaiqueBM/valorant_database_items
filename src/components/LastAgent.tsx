@@ -22,12 +22,12 @@ const LastAgent = () => {
 
   return (
     <div className=" bg-purple-500 pt-16">
-      <div className="text-center font-raj font-bold text-8xl text-vava">
+      <div className="text-center font-raj font-bold md:text-8xl text-6xl text-vava">
         ÚLTIMO AGENTE LANÇADO
       </div>
 
-      <div className="flex flex-row flex-wrap justify-center items-center m-10">
-        <div className="w-1/3">
+      <div className="flex md:flex-row flex-col flex-wrap justify-center items-center m-10">
+        <div className="lg:w-1/3 md:w-1/2">
           {agenteAtual.length === 0 ? (
             <p>Carregando...</p>
           ) : (
@@ -46,23 +46,23 @@ const LastAgent = () => {
             </div>
           )}
         </div>
-        <div className="w-1/2 text-vava font-fira">
+        <div className="lg:w-1/2 text-vava font-fira">
           {agenteAtual.length === 0 ? (
             <p>Carregando...</p>
           ) : (
             <>
-              <div className="text-6xl uppercase font-semibold pt-10 flex justify-between">
+              <div className="md:text-6xl text-4xl uppercase font-semibold pt-10 flex justify-between">
                 {agenteAtual.displayName}{" "}
-                <img className="h-14" src={agenteAtual.role.displayIcon} />
+                <img className="md:h-14 h-10" src={agenteAtual.role.displayIcon} />
               </div>
-              <div className="text-2xl text-justify pt-10">
+              <div className="md:text-2xl text-xl text-justify pt-10">
                 {agenteAtual.description}
               </div>
 
-              <div className="flex w-full justify-between">
+              <div className="flex sm:flex-row flex-col w-full sm:justify-between justify-center">
                 {agenteAtual.abilities.map((abilidades, index) => (
                   <div className="pt-10" key={index}>
-                    <img src={abilidades.displayIcon} />
+                    <img className="mx-auto" src={abilidades.displayIcon} />
                     <div className="text-center">{abilidades.displayName}</div>
                   </div>
                 ))}
@@ -71,7 +71,7 @@ const LastAgent = () => {
           )}
         </div>
       </div>
-      <div className="flex flex-row flex-wrap justify-center -mt-10 pb-28">
+      <div className="flex flex-row flex-wrap justify-center pb-28 lg:mt-0 mt-24">
           <button className="bg-vava px-10 py-4 font-raj font-semibold text-2xl rounded-lg">
             VER MAIS AGENTES
           </button>

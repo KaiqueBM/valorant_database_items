@@ -35,11 +35,11 @@ const Rank = () => {
         <p>Carregando...</p>
       ) : (
 	<div className="bg-vava py-16">
-      <div className="text-center font-raj font-bold text-8xl">
+      <div className="text-center font-raj font-bold md:text-8xl text-6xl">
         RANKS
       </div>
 
-	  <div className='flex flex-row flex-wrap justify-center gap-4 p-10'>
+	  <div className='md:flex md:flex-row md:flex-wrap grid sm:grid-cols-3 grid-cols-2 justify-center gap-4 py-10 md:px-10'>
 		{rankAtual.map((rank, index)=>(
 			<div key={index}>
 				<img src={rank.largeIcon} />

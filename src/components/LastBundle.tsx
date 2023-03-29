@@ -26,13 +26,12 @@ const LastBundle = () => {
   }
   return (
     <div className="bg-vava py-16">
-      <div className="text-center font-raj font-bold text-8xl">
+      <div className="text-center font-raj font-bold md:text-8xl text-6xl">
         BUNDLE ATUAL DA LOJA
       </div>
-      <div className="flex flex-row justify-center"></div>
 
       <div className="flex flex-col py-12">
-        <div className="grid grid-cols-5 gap-2 items-end  h-full">
+        <div className="grid lg:grid-cols-5 sm:grid-cols-2 grid-cols-1 gap-2 items-end  h-full">
           {weaponAtual.length === 0 ? (
             <p>Carregando...</p>
           ) : (
