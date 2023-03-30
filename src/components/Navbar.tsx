@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import {Link} from 'react-router-dom'
-import { BsList, BsFillPersonFill } from "react-icons/bs";
+import { BsList, BsFillPersonFill, BsFillHouseFill } from "react-icons/bs";
 import { GiGlock, GiCardboardBoxClosed, GiSpray, GiCardPick, GiPathDistance, GiGems } from "react-icons/gi";
 
 const Navbar = () => {
@@ -28,10 +28,10 @@ const Navbar = () => {
       </div>
             <ul className={`lg:flex lg:flex-row flex-col justify-center items-center ${navbar}`}>
                 <li className='xl:mx-1 flex px-5 py-1 rounded-lg  hover:bg-verm hover:text-vava transition duration-300 cursor-pointer lg:my-0 my-1'>
-                <BsFillPersonFill className='text-2xl mt-1 mr-1' /><Link to={`/`} className="font-raj font-bold text-2xl">Home</Link>
+                <BsFillHouseFill className='text-2xl mt-1 mr-1' /><Link to={`/`} className="font-raj font-bold text-2xl">Home</Link>
                 </li>
                 <li className='xl:mx-1 flex xl:px-5 py-1 rounded-lg  hover:bg-verm hover:text-vava transition duration-300 cursor-pointer lg:my-0 my-1'>
-                <GiGlock className='text-2xl mt-1 mr-1' /><Link to={`/agentes`} className="font-raj font-bold text-2xl">Agentes</Link>
+                <BsFillPersonFill className='text-2xl mt-1 mr-1' /><Link to={`/agentes`} className="font-raj font-bold text-2xl">Agentes</Link>
                 </li>
                 <li className='xl:mx-1 flex xl:px-5 px-3 py-1 rounded-lg  hover:bg-verm hover:text-vava transition duration-300 cursor-pointer lg:my-0 my-1'>
                 <GiPathDistance className='text-2xl mt-1 mr-1' /><Link to={`/mapas`} className="font-raj font-bold text-2xl">Mapas</Link>
