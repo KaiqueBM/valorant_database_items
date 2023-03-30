@@ -16,9 +16,9 @@ const Navbar = () => {
       }
     }
     return (
-        <nav className="py-2 font-raj text-bold border-b-4 border-b-verm bg-vava text-verm">
+        <nav className="py-2 font-raj text-bold border-b-4 border-b-verm bg-vava text-verm z-50">
             <div className="lg:hidden flex flex-row justify-between items-center">
-        <div className="uppercase ml-2 sm:text-4xl text-2xl font-raj font-bold">
+        <div className="uppercase ml-2 sm:text-4xl text-2xl font-raj font-bold z-20">
             Valorant Database
         </div>
         <BsList
