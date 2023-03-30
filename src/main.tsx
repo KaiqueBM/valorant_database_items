@@ -15,6 +15,7 @@ import './styles/index.css'
 import './index.css'
 import Agentes from './routes/Agentes';
 import Armas from './routes/Armas';
+import AgenteInfo from './routes/AgenteInfo';
 
 const router = createBrowserRouter([
   {
@@ -52,6 +53,10 @@ const router = createBrowserRouter([
         path: "/armas",
         element: <Armas />
       },
+      {
+        path: "/agentes/:uuid",
+        element: <AgenteInfo />
+      }
     ]
   }
 ])

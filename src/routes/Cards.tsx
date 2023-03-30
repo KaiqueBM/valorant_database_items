@@ -29,7 +29,7 @@ const Cards = () => {
 
     return (
         <div className="container">
-            <div className="title text-center m-5">CARDS</div>
+            <div className="text-center font-raj font-bold md:text-8xl text-6xl text-vava m-5">CARDS</div>
             <div className="flex flex-row flex-wrap justify-center w-full">
                 {cards.length === 0 ? (<p>Carregando...</p>) : (
                     cards.map((bundle: { uuid: string, displayName: string, largeArt: string }) => (

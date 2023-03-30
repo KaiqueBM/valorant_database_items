@@ -37,7 +37,7 @@ const Bundles = () => {
 
     return (
         <div className="container-fluid">
-            <div className="title text-center m-5">BUNDLES</div>
+            <div className="text-center font-raj font-bold md:text-8xl text-6xl text-vava m-5">BUNDLES</div>
             <div className="flex flex-row flex-wrap justify-center">
                 {bundles.length === 0 ? (<p>Carregando...</p>) : (
                     bundles.map((bundle: { uuid: string, displayName: string, verticalPromoImage: string, displayIcon: string }) => (

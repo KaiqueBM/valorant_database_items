@@ -37,7 +37,7 @@ const Sprays = () => {
 
     return (
         <div className="container-fluid">
-            <div className="title text-center m-5">SPRAYS</div>
+            <div className="text-center font-raj font-bold md:text-8xl text-6xl text-vava m-5">SPRAYS</div>
             <div className="flex flex-row flex-wrap justify-center w-full">
                 {sprays.length === 0 ? (<p>Carregando...</p>) : (
                     sprays.map((sprays: { uuid: string, displayName: string, fullTransparentIcon: string }) => (

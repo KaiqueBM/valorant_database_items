@@ -29,7 +29,7 @@ const Chaveiros = () => {
 
     return (
         <div className="">
-            <div className="title text-center m-5">CHAVEIROS</div>
+            <div className="text-center font-raj font-bold md:text-8xl text-6xl text-vava m-5">CHAVEIROS</div>
             <div className="flex flex-row flex-wrap justify-center w-full">
                 {chaveiros.length === 0 ? (<p>Carregando...</p>) : (
                     chaveiros.map((bundle: { uuid: string, displayName: string, displayIcon: string }) => (
