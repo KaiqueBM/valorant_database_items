@@ -37,7 +37,7 @@ const Agentes = () => {
           <p>Carregando...</p>
         ) : (
           agentesHero.map((agent:any) => (
-            <div className="w-3/12" key={agent.uuid}>
+            <div className="lg:w-3/12 sm:w-6/12" key={agent.uuid}>
               <Link to={`/agentes/${agent.uuid}`}>
               <img
                 src={agent.background}
@@ -46,10 +46,10 @@ const Agentes = () => {
               />
               <div className="relative">
                 <img
-                  className="web absolute bottom-10"
+                  className="absolute bottom-10"
                   src={agent.bustPortrait}
                 />
-                <p className="text-center">{agent.displayName}</p>
+                <p className="text-center md:text-4xl text-2xl font-semibold">{agent.displayName}</p>
               </div>
               </Link>
             </div>

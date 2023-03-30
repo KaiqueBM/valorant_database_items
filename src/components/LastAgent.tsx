@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import api from "../axios/config";
 
 const LastAgent = () => {
@@ -72,9 +73,11 @@ const LastAgent = () => {
         </div>
       </div>
       <div className="flex flex-row flex-wrap justify-center pb-28 lg:mt-0 mt-24">
-          <button className="bg-vava px-10 py-4 font-raj font-semibold text-2xl rounded-lg">
+        <Link to={`/agentes/`}>
+          <button className="bg-vava px-10 py-4 font-raj font-semibold text-2xl rounded-lg text-black">
             VER MAIS AGENTES
           </button>
+          </Link>
         </div>
     </div>
   );
