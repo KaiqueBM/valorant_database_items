@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import api from "../axios/config";
+import { Link } from "react-router-dom";
 
 const LastMap = () => {
   const [mapaAtual, setMapaAtual] = useState<any>([]);
@@ -41,9 +42,11 @@ const LastMap = () => {
 			</div>
 		</div>
 		<div className="flex flex-row flex-wrap justify-center pb-12 mt-20">
+    <Link to={`/mapas`}>
           <button className="bg-vava px-10 py-4 font-raj font-semibold text-2xl rounded-lg">
             VER MAIS MAPAS
           </button>
+          </Link>
         </div>
         </>
       )}

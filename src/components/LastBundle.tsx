@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import api from "../axios/config";
 import wallpaper from "../assets/wall2.png";
+import { Link } from "react-router-dom";
 
 const LastBundle = () => {
   const [weaponAtual, setWeaponAtual] = useState<any>([]);
@@ -47,9 +48,11 @@ const LastBundle = () => {
           )}
         </div>
         <div className="mx-auto mt-2 pt-12">
+        <Link to={`/bundles`}>
           <button className="bg-verm px-10 py-4 font-raj font-semibold text-2xl rounded-lg">
             VER OUTROS BUNDLES
           </button>
+          </Link>
         </div>
       </div>
     </div>

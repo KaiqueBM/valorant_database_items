@@ -55,15 +55,19 @@ const Footer = () => {
 		  </div>
 
 		  <div className="flex md:flex-row flex-col flex-wrap justify-center mt-10 pb-14">
+        <a href="https://playvalorant.com/pt-br/">
 		  <button className="bg-verm px-10 py-4 font-raj font-semibold text-2xl rounded-lg mx-5 my-5">
             SITE OFICIAL DO VALORANT
           </button>
+          </a><a href="https://github.com/KaiqueBM/valorant_database_items">
           <button className="bg-vava px-10 py-4 font-raj font-semibold text-2xl rounded-lg mx-5 my-5">
             REPOSITÓRIO
           </button>
+          </a><a href="https://github.com/KaiqueBM">
 		  <button className="bg-vava px-10 py-4 font-raj font-semibold text-2xl rounded-lg mx-5 my-5">
             GITHUB
           </button>
+          </a>
         </div>
 		</>
 		)}
