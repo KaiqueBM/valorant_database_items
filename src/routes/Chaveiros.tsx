@@ -33,7 +33,7 @@ const Chaveiros = () => {
             <div className="grid xl:grid-cols-6 lg:grid-cols-5 md:grid-cols-4 sm:grid-cols-3 grid-cols-2 flex-wrap justify-center w-full">
                 {chaveiros.length === 0 ? (<p>Carregando...</p>) : (
                     chaveiros.map((bundle: { uuid: string, displayName: string, displayIcon: string }) => (
-                        <div className="m-5 bg-slate-100 rounded-xl" key={bundle.uuid}>
+                        <div className="m-5 bg-slate-100 rounded-xl transition duration-500 hover:-translate-y-3 cursor-pointer" key={bundle.uuid}>
                             <img className=" bg-slate-100 rounded-t-xl h-60 p-5 mx-auto" src={bundle.displayIcon} />
                             <p className="py-1 px-1 bg-vava text-verm font-fira font-medium border-b-4 rounded-b-xl border-verm text-center">{bundle.displayName}</p>
                             

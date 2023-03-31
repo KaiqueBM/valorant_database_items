@@ -41,7 +41,7 @@ const Sprays = () => {
             <div className="grid xl:grid-cols-6 lg:grid-cols-5 md:grid-cols-4 sm:grid-cols-3 grid-cols-2 flex-wrap justify-center w-full">
                 {sprays.length === 0 ? (<p>Carregando...</p>) : (
                     sprays.map((sprays: { uuid: string, displayName: string, fullTransparentIcon: string }) => (
-                        <div className="m-5" key={sprays.uuid}>
+                        <div className="m-5 transition duration-500 hover:-translate-y-3 cursor-pointer" key={sprays.uuid}>
                             <img width="350px" height="350px" className="bg-slate-100 rounded-t-xl" src={sprays.fullTransparentIcon} />
                             <p className="py-1 px-1 bg-vava xl:text-xl text-base text-verm font-fira font-medium border-b-4 rounded-b-xl border-verm text-center">{sprays.displayName}</p>
                             

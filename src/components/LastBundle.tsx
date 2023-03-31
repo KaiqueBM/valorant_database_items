@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import api from "../axios/config";
+import wallpaper from "../assets/wall2.png";
 
 const LastBundle = () => {
   const [weaponAtual, setWeaponAtual] = useState<any>([]);
@@ -25,7 +26,7 @@ const LastBundle = () => {
     }
   }
   return (
-    <div className="bg-vava py-16">
+    <div className="bg-vava py-16" style={{'backgroundImage': 'url('+wallpaper+')'}}>
       <div className="text-center font-raj font-bold md:text-8xl text-6xl">
         BUNDLE ATUAL DA LOJA
       </div>

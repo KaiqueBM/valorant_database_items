@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import api from '../axios/config';
+import wallpaper from "../assets/wall2.png";
 
 const Rank = () => {
 	const [rankAtual, setRankAtual] = useState<any>([]);
@@ -34,7 +35,7 @@ const Rank = () => {
 	{rankAtual.length === 0 ? (
         <p>Carregando...</p>
       ) : (
-	<div className="bg-vava py-16">
+	<div className="bg-vava py-16" style={{'backgroundImage': 'url('+wallpaper+')'}}>
       <div className="text-center font-raj font-bold md:text-8xl text-6xl">
         RANKS
       </div>
