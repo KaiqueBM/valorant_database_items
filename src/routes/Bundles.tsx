@@ -38,13 +38,12 @@ const Bundles = () => {
     return (
         <div className="container-fluid">
             <div className="text-center font-raj font-bold md:text-8xl text-6xl text-vava m-5">BUNDLES</div>
-            <div className="flex flex-row flex-wrap justify-center">
+            <div className="grid xl:grid-cols-5 md:grid-cols-4 sm:grid-cols-3 grid-cols-2 flex-wrap justify-center">
                 {bundles.length === 0 ? (<p>Carregando...</p>) : (
                     bundles.map((bundle: { uuid: string, displayName: string, verticalPromoImage: string, displayIcon: string }) => (
-                        <div className="bundles m-5" key={bundle.uuid}>
-                            <img className="web" width="320px" height="452px" src={bundle.verticalPromoImage} />
-                            <img className="mobile" src={bundle.displayIcon} />
-                            <p className="text-center">{bundle.displayName}</p>
+                        <div className="m-5 transition duration-500 hover:-translate-y-3 cursor-pointer" key={bundle.uuid}>
+                            <img className="rounded-t-xl" src={bundle.verticalPromoImage} />
+                            <p className="text-center bg-vava text-verm font-fira font-medium sm:text-xl text-lg border-b-4 border-verm rounded-b-xl">{bundle.displayName}</p>
                             
                         </div>
                     ))
