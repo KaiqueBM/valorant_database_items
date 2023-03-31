@@ -83,6 +83,7 @@ const AgenteInfo = () => {
                           {abilidades.slot === "Ability2" && (<span className='text-right sm:text-2xl text-xl font-bold bg-vava py-1 px-2 rounded-lg' style={{'color': '#'+agenteAtual.backgroundGradientColors[1].substring(0,6)}}>E</span>)}
                           {abilidades.slot === "Grenade" && (<span className='text-right sm:text-2xl text-xl font-bold bg-vava py-1 px-2 rounded-lg' style={{'color': '#'+agenteAtual.backgroundGradientColors[1].substring(0,6)}}>C</span>)}
                           {abilidades.slot === "Ultimate" && (<span className='text-right sm:text-2xl text-xl font-bold bg-vava py-1 px-2 rounded-lg' style={{'color': '#'+agenteAtual.backgroundGradientColors[1].substring(0,6)}}>ULT | X</span>)}
+                          {abilidades.slot === "Passive" && (<span className='text-right sm:text-2xl text-xl font-bold bg-vava py-1 px-2 rounded-lg' style={{'color': '#'+agenteAtual.backgroundGradientColors[1].substring(0,6)}}>PASSIVA</span>)}
                           </div>
                         <div className='text-justify text-lg'>{abilidades.description}</div>
                       </div>
