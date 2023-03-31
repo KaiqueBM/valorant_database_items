@@ -28,14 +28,14 @@ const Cards = () => {
 
 
     return (
-        <div className="container">
+        <div className="lg:mx-8 mx-0">
             <div className="text-center font-raj font-bold md:text-8xl text-6xl text-vava m-5">CARDS</div>
-            <div className="flex flex-row flex-wrap justify-center w-full">
+            <div className="grid xl:grid-cols-6 lg:grid-cols-5 md:grid-cols-4 sm:grid-cols-3 grid-cols-2 flex-wrap justify-center w-full">
                 {cards.length === 0 ? (<p>Carregando...</p>) : (
                     cards.map((bundle: { uuid: string, displayName: string, largeArt: string }) => (
-                        <div className="m-5 cards w-2/12" key={bundle.uuid}>
-                            <img className="w-full" src={bundle.largeArt} />
-                            <p className="text-center">{bundle.displayName}</p>
+                        <div className="m-5 transition duration-500 hover:-translate-y-3 cursor-pointer" key={bundle.uuid}>
+                            <img className="rounded-t-xl" src={bundle.largeArt} />
+                            <p className="py-1 px-1 bg-vava text-verm font-fira font-medium border-b-4 rounded-b-xl border-verm text-center">{bundle.displayName}</p>
                             
                         </div>
                     ))

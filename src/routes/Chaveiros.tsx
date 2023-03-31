@@ -30,12 +30,12 @@ const Chaveiros = () => {
     return (
         <div className="">
             <div className="text-center font-raj font-bold md:text-8xl text-6xl text-vava m-5">CHAVEIROS</div>
-            <div className="flex flex-row flex-wrap justify-center w-full">
+            <div className="grid xl:grid-cols-6 lg:grid-cols-5 md:grid-cols-4 sm:grid-cols-3 grid-cols-2 flex-wrap justify-center w-full">
                 {chaveiros.length === 0 ? (<p>Carregando...</p>) : (
                     chaveiros.map((bundle: { uuid: string, displayName: string, displayIcon: string }) => (
-                        <div className="m-5 chaveiros  w-2/12" key={bundle.uuid}>
-                            <img className="w-full h-60 p-5" src={bundle.displayIcon} />
-                            <p className="text-center">{bundle.displayName}</p>
+                        <div className="m-5 bg-slate-100 rounded-xl" key={bundle.uuid}>
+                            <img className=" bg-slate-100 rounded-t-xl h-60 p-5 mx-auto" src={bundle.displayIcon} />
+                            <p className="py-1 px-1 bg-vava text-verm font-fira font-medium border-b-4 rounded-b-xl border-verm text-center">{bundle.displayName}</p>
                             
                         </div>
                     ))

@@ -36,14 +36,14 @@ const Sprays = () => {
     }
 
     return (
-        <div className="container-fluid">
+        <div className="">
             <div className="text-center font-raj font-bold md:text-8xl text-6xl text-vava m-5">SPRAYS</div>
-            <div className="flex flex-row flex-wrap justify-center w-full">
+            <div className="grid xl:grid-cols-6 lg:grid-cols-5 md:grid-cols-4 sm:grid-cols-3 grid-cols-2 flex-wrap justify-center w-full">
                 {sprays.length === 0 ? (<p>Carregando...</p>) : (
                     sprays.map((sprays: { uuid: string, displayName: string, fullTransparentIcon: string }) => (
-                        <div className="m-5 sprays" key={sprays.uuid}>
-                            <img width="350px" height="350px" className="" src={sprays.fullTransparentIcon} />
-                            <p className="text-center">{sprays.displayName}</p>
+                        <div className="m-5" key={sprays.uuid}>
+                            <img width="350px" height="350px" className="bg-slate-100 rounded-t-xl" src={sprays.fullTransparentIcon} />
+                            <p className="py-1 px-1 bg-vava xl:text-xl text-base text-verm font-fira font-medium border-b-4 rounded-b-xl border-verm text-center">{sprays.displayName}</p>
                             
                         </div>
                     ))
