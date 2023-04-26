@@ -22,7 +22,7 @@ const LastBundle = () => {
   }, []);
 
   function filter_weapon(props: any) {
-    if (props.themeUuid === "9bcc3388-4a9d-7c7e-443d-64bb38f88d2f") {
+    if (props.themeUuid === "ad4988de-487f-5f0b-5b21-a9af80995aea") {
       return props;
     }
   }
