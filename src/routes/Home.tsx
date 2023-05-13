@@ -36,8 +36,6 @@ const Home = () => {
 
       <LastMap />
 
-      <Rank />
-
       <Footer />
     </>
   );
