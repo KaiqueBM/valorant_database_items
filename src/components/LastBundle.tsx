@@ -22,7 +22,7 @@ const LastBundle = () => {
   }, []);
 
   function filter_weapon(props: any) {
-    if (props.themeUuid === "ad4988de-487f-5f0b-5b21-a9af80995aea") {
+    if (props.themeUuid === "722faa42-47ca-b0f0-65ba-9ba076fe048c") {
       return props;
     }
   }
@@ -32,8 +32,8 @@ const LastBundle = () => {
         BUNDLE ATUAL DA LOJA
       </div>
 
-      <div className="flex flex-col py-12">
-        <div className="grid lg:grid-cols-5 sm:grid-cols-2 grid-cols-1 gap-2 items-end  h-full">
+      <div className="flex flex-col py-12 justify-center">
+        <div className="grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-2 items-end  h-full ">
           {weaponAtual.length === 0 ? (
             <p>Carregando...</p>
           ) : (
