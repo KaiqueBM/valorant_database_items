@@ -8,7 +8,7 @@ const LastAgent = () => {
   const getAgenteAtual = async () => {
     try {
       const response = await api.get(
-        "/agents/e370fa57-4757-3604-3648-499e1f642d3f?language=pt-BR"
+        "/agents/cc8b64c8-4b25-4ff9-6e7f-37b4da43d235?language=pt-BR"
       );
       const data = response.data;
       setAgenteAtual(data.data);
@@ -22,7 +22,7 @@ const LastAgent = () => {
   }, []);
 
   return (
-    <div className=" bg-purple-500 pt-16">
+    <div className=" bg-blue-900 pt-16">
       <div className="text-center font-raj font-bold md:text-8xl text-6xl text-vava">
         ÚLTIMO AGENTE LANÇADO
       </div>
