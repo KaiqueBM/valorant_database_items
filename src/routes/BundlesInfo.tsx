@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import api from "../axios/config";
 
+import '../styles/pages.css'
+
 const BundlesInfo = () => {
 	const { uuid } = useParams();
 	const displayName = uuid?.replace('%20', ' ')
@@ -45,30 +47,44 @@ const BundlesInfo = () => {
 				<p>Carregando...</p>
 			) : (
 
-				<div className="bg-vava py-16">
-					<div className="text-center font-raj font-bold md:text-8xl text-6xl">
+				<div className="py-16">
+					<div className="text-center font-raj font-bold md:text-8xl text-6xl text-vava m-5">
 						Bundle {displayName}
 					</div>
 
 					<div className="flex flex-col py-12 justify-center">
 						{bundleAtual.map((weapon: any) => (
-							<div className="p-5 " key={weapon.uuid}>
-								<img className="h-20 mx-auto" src={weapon.displayIcon} />
-								<p className="text-center text-black font-fira text-xl">
+							<div className="p-5 bg-vava container rounded-xl" key={weapon.uuid}>
+								<img className="h-40 mx-auto mt-6" src={weapon.displayIcon} />
+								<p className="text-center text-black font-fira text-5xl font-semibold mt-2">
 									{weapon.displayName}
 								</p>
-								<p>Níveis:</p>
+								<p className="text-verm font-fira text-4xl font-semibold mt-2 mx-2">Níveis:</p>
+								<div className="flex flex-row">
+								{weapon.levels.map((nivel: any, index: number) => (
+									<div>
+										{index !== 0 && (
+											<div className="mx-2">
+												<p className="text-center text-black font-raj text-xl font-semibold">{nivel.displayName}</p>
+												<video className="rounded-lg" autoPlay muted controls src={nivel.streamedVideo} />
+											</div>
+										)}
+									</div>
+								))}
+								</div>
+								<p className="text-verm font-fira text-4xl font-semibold mt-10 mx-2">Variantes:</p>
 								<div className="flex flex-row">
 								{weapon.chromas.map((chromas: any, index: number) => (
 									<div>
 										{index !== 0 && (
-											<>
-												<p>{formatarTextoVariante(chromas.displayName)}</p>
-												<img className="h-20 mx-auto" src={chromas.displayIcon} />
-												<video autoPlay muted controls src={chromas.streamedVideo} />
-											</>
+											<div className="mx-2">
+												<img className="h-24 mx-auto mt-6" src={chromas.displayIcon} />
+												<div className="text-center"><img className="rounded-lg inline-block h-6 mx-1" src={chromas.swatch} /><span className="text-center text-black font-raj text-xl font-semibold">{formatarTextoVariante(chromas.displayName)}</span></div>
+												<video className="rounded-lg mt-2" autoPlay muted controls src={chromas.streamedVideo} />
+											</div>
 										)}
 									</div>
+									
 								))}
 								</div>
 							</div>
