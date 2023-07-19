@@ -22,7 +22,7 @@ const Home = () => {
     <>
       <div className="home relative">
         <img src={wallpaper} className="" />
-        <div className="absolute lg:bottom-1/3 sm:bottom-10 bottom-6 w-full text-right container">
+        <div className="absolute lg:bottom-1/3 sm:bottom-10 bottom-6 w-full text-right container hover:scale-125 transition hover:-translate-x-28">
           <span className="text-vava font-raj font-bold md:text-9xl sm:text-7xl text-6xl block">
             VALORANT
           </span>

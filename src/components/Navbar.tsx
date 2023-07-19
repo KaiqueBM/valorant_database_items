@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import {Link} from 'react-router-dom'
 import { BsList, BsFillPersonFill, BsFillHouseFill } from "react-icons/bs";
-import { GiGlock, GiCardboardBoxClosed, GiSpray, GiCardPick, GiPathDistance, GiGems } from "react-icons/gi";
+import { GiCardboardBoxClosed, GiSpray, GiCardPick, GiPathDistance, GiGems } from "react-icons/gi";
 
 const Navbar = () => {
     const [navbar, setNavbar] = useState("hidden");
@@ -27,30 +27,27 @@ const Navbar = () => {
         />
       </div>
             <ul className={`lg:flex lg:flex-row flex-col justify-center items-center ${navbar}`}>
-                <li className='xl:mx-1 flex px-5 py-1 rounded-lg  hover:bg-verm hover:text-vava transition duration-300 cursor-pointer lg:my-0 my-1'>
-                <BsFillHouseFill className='text-2xl mt-1 mr-1' /><Link to={`/`} className="font-raj font-bold text-2xl">Home</Link>
-                </li>
-                <li className='xl:mx-1 flex xl:px-5 py-1 rounded-lg  hover:bg-verm hover:text-vava transition duration-300 cursor-pointer lg:my-0 my-1'>
-                <BsFillPersonFill className='text-2xl mt-1 mr-1' /><Link to={`/agentes`} className="font-raj font-bold text-2xl">Agentes</Link>
-                </li>
-                <li className='xl:mx-1 flex xl:px-5 px-3 py-1 rounded-lg  hover:bg-verm hover:text-vava transition duration-300 cursor-pointer lg:my-0 my-1'>
-                <GiPathDistance className='text-2xl mt-1 mr-1' /><Link to={`/mapas`} className="font-raj font-bold text-2xl">Mapas</Link>
-                </li>
-                <li className='xl:mx-1 flex xl:px-5 px-3 py-1 rounded-lg  hover:bg-verm hover:text-vava transition duration-300 cursor-pointer lg:my-0 my-1'>
-                <GiCardboardBoxClosed className='text-2xl mt-1 mr-1' /><Link to={`/bundles`} className="font-raj font-bold text-2xl">Bundles</Link>
-                </li>
-                <li className='xl:mx-1 flex xl:px-5 px-3 py-1 rounded-lg  hover:bg-verm hover:text-vava transition duration-300 cursor-pointer lg:my-0 my-1'>
-                    <GiGlock className='text-2xl mt-1 mr-1' /><Link to={`/armas`} className="font-raj font-bold text-2xl">Armas</Link>
-                </li>
-                <li className='xl:mx-1 flex xl:px-5 px-3 py-1 rounded-lg  hover:bg-verm hover:text-vava transition duration-300 cursor-pointer lg:my-0 my-1'>
-                <GiCardPick className='text-2xl mt-1 mr-1' /><Link to={`/cards`} className="font-raj font-bold text-2xl">Cards</Link>
-                </li>
-                <li className='xl:mx-1 flex xl:px-5 px-3 py-1 rounded-lg  hover:bg-verm hover:text-vava transition duration-300 cursor-pointer lg:my-0 my-1'>
-                <GiGems className='text-2xl mt-1 mr-1' /><Link to={`/chaveiros`} className="font-raj font-bold text-2xl">Chaveiros</Link>
-                </li>
-                <li className='xl:mx-1 flex xl:px-5 px-3 py-1 rounded-lg  hover:bg-verm hover:text-vava transition duration-300 cursor-pointer lg:my-0 my-1'>
-                <GiSpray className='text-2xl mt-1 mr-1' /><Link to={`/sprays`} className="font-raj font-bold text-2xl">Sprays</Link>
-                </li>
+            <Link to={`/`}><li className='xl:mx-1 flex xl:px-5 py-1 px-3 rounded-lg hover:bg-verm hover:text-vava transition duration-300 cursor-pointer lg:my-0 my-1'>
+                <BsFillHouseFill className='text-2xl mt-1 mr-1' /><span className="font-raj font-bold text-2xl">Home</span>
+                </li></Link>
+                <Link to={`/agentes`}><li className='xl:mx-1 flex xl:px-5 py-1 px-3 rounded-lg  hover:bg-verm hover:text-vava transition duration-300 cursor-pointer lg:my-0 my-1'>
+                <BsFillPersonFill className='text-2xl mt-1 mr-1' /><span className="font-raj font-bold text-2xl">Agentes</span>
+                </li></Link>
+                <Link to={`/mapas`}><li className='xl:mx-1 flex xl:px-5 px-3 py-1 rounded-lg  hover:bg-verm hover:text-vava transition duration-300 cursor-pointer lg:my-0 my-1'>
+                <GiPathDistance className='text-2xl mt-1 mr-1' /><span className="font-raj font-bold text-2xl">Mapas</span>
+                </li></Link>
+                <Link to={`/bundles`}><li className='xl:mx-1 flex xl:px-5 px-3 py-1 rounded-lg  hover:bg-verm hover:text-vava transition duration-300 cursor-pointer lg:my-0 my-1'>
+                <GiCardboardBoxClosed className='text-2xl mt-1 mr-1' /><span className="font-raj font-bold text-2xl">Bundles</span>
+                </li></Link>
+                <Link to={`/cards`}><li className='xl:mx-1 flex xl:px-5 px-3 py-1 rounded-lg  hover:bg-verm hover:text-vava transition duration-300 cursor-pointer lg:my-0 my-1'>
+                <GiCardPick className='text-2xl mt-1 mr-1' /><span className="font-raj font-bold text-2xl">Cards</span>
+                </li></Link>
+                <Link to={`/chaveiros`}><li className='xl:mx-1 flex xl:px-5 px-3 py-1 rounded-lg  hover:bg-verm hover:text-vava transition duration-300 cursor-pointer lg:my-0 my-1'>
+                <GiGems className='text-2xl mt-1 mr-1' /><span className="font-raj font-bold text-2xl">Chaveiros</span>
+                </li></Link>
+                <Link to={`/sprays`}><li className='xl:mx-1 flex xl:px-5 px-3 py-1 rounded-lg  hover:bg-verm hover:text-vava transition duration-300 cursor-pointer lg:my-0 my-1'>
+                <GiSpray className='text-2xl mt-1 mr-1' /><span className="font-raj font-bold text-2xl">Sprays</span>
+                </li></Link>
             </ul>
         </nav>
     )

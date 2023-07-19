@@ -14,7 +14,6 @@ import Chaveiros from './routes/Chaveiros';
 import './styles/index.css'
 import './index.css'
 import Agentes from './routes/Agentes';
-import Armas from './routes/Armas';
 import AgenteInfo from './routes/AgenteInfo';
 import BundlesInfo from './routes/BundlesInfo';
 
@@ -49,10 +48,6 @@ const router = createBrowserRouter([
       {
         path: "/agentes",
         element: <Agentes />
-      },
-      {
-        path: "/armas",
-        element: <Armas />
       },
       {
         path: "/agentes/:uuid",

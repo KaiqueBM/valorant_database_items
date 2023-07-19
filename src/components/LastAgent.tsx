@@ -74,7 +74,7 @@ const LastAgent = () => {
       </div>
       <div className="flex flex-row flex-wrap justify-center pb-28 lg:mt-0 mt-24">
         <Link to={`/agentes/`}>
-          <button className="bg-vava px-10 py-4 font-raj font-semibold text-2xl rounded-lg text-black">
+          <button className="bg-vava px-10 py-4 font-raj font-semibold text-2xl rounded-lg text-black hover:text-white hover:bg-verm transition hover:scale-105">
             VER MAIS AGENTES
           </button>
           </Link>

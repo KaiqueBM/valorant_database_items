@@ -43,7 +43,7 @@ const LastMap = () => {
 		</div>
 		<div className="flex flex-row flex-wrap justify-center pb-12 mt-20">
     <Link to={`/mapas`}>
-          <button className="bg-vava px-10 py-4 font-raj font-semibold text-2xl rounded-lg">
+          <button className="bg-vava px-10 py-4 font-raj font-semibold text-2xl rounded-lg hover:text-white hover:bg-verm transition hover:scale-105">
             VER MAIS MAPAS
           </button>
           </Link>
