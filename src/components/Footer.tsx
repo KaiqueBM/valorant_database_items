@@ -3,20 +3,14 @@ import api from '../axios/config';
 import wallpaper from "../assets/wall2.png";
 import dayjs from 'dayjs'
 
-interface Season{ 
-  uuid: string,
-  displayName: string,
-  type: string,
-  startTime: string,
-  endTime: string,
-  parentUuid: string,
-  assetPath: string
-}
+import { ISeason, IVersion } from '../@Types/ISeasons';
+
+
 
 const Footer = () => {
 
-  const [versionAtual, setVersionAtual] = useState<any>([]);
-  const [seasons, setSeasons] = useState<Season[]>([]);
+  const [versionAtual, setVersionAtual] = useState<IVersion | null>(null);
+  const [seasons, setSeasons] = useState<ISeason[]>([]);
 
   const getVersionAtual = async () => {
     try {
@@ -27,6 +21,7 @@ const Footer = () => {
       const data = response.data;
       const dataSeason = responseSeason.data
       const data_filter = dataSeason.data.filter(filter_seasons);
+      //console.log(dataSeason)
       setVersionAtual(data.data);
       setSeasons(data_filter)
     } catch (error) {
@@ -38,8 +33,8 @@ const Footer = () => {
     getVersionAtual();
   }, []);
 
-  function filter_seasons(season: Season) {
-    if ((season.displayName === "EPISÓDIO 5") || (season.uuid === "34093c29-4306-43de-452f-3f944bde22be")) {
+  function filter_seasons(season: ISeason) {
+    if ((season.displayName === "EPISÓDIO 6") || (season.uuid === "0981a882-4e7d-371a-70c4-c3b4f46c504a")) {
       return season;
     }
   }
@@ -47,9 +42,7 @@ const Footer = () => {
 
   return (
     <div className="pt-16 bg-vava border-verm border-t-4" style={{ 'backgroundImage': 'url(' + wallpaper + ')' }}>
-      {versionAtual.length === 0 ? (
-        <p>Carregando...</p>
-      ) : (
+      {versionAtual && (
         <>
           <div className="text-center font-raj font-bold md:text-8xl text-6xl text-verm">
             INFORMAÇÕES

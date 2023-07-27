@@ -5,12 +5,14 @@ import api from "../axios/config";
 import '../styles/pages.css'
 import ArmaVariante from "../components/ArmaVariante";
 import ArmaNivel from "../components/ArmaNivel";
+import { IBundle } from "../@Types/IBundle";
+import { ILastArma } from "../@Types/IArma";
 
 const BundlesInfo = () => {
 	const { uuid } = useParams();
-	const displayName = uuid?.replace('%20', ' ')
+	const displayName: any = uuid?.replace('%20', ' ')
 
-	const [bundleAtual, setBundleAtual] = useState<any>([]);
+	const [bundleAtual, setBundleAtual] = useState<ILastArma[] | null>(null);
 	const [armaAtual, setArmaAtual] = useState<any>([]);
 	const [showModalVariante, setShowModalVariante] = useState<boolean>(false);
 	const [showModalNivel, setShowModalNivel] = useState<boolean>(false);
@@ -21,7 +23,6 @@ const BundlesInfo = () => {
 			const data = response.data;
 			const data_filter = data.data.filter(filter_weapon);
 			setBundleAtual(data_filter);
-			console.log(data_filter)
 
 
 		} catch (error) {
@@ -33,32 +34,25 @@ const BundlesInfo = () => {
 		getBundleAtual();
 	}, []);
 
-	function filter_weapon(props: any) {
+	function filter_weapon(props: ILastArma) {
 		if (props.displayName.includes(displayName)) {
 			return props;
 		}
 	}
 
-	function chamarModalNivel(weapon: any) {
+	function chamarModalNivel(weapon: ILastArma) {
 		setArmaAtual(weapon)
 		setShowModalNivel(true)
 	}
 
-	function chamarModalVariante(weapon: any) {
+	function chamarModalVariante(weapon: ILastArma) {
 		setArmaAtual(weapon)
 		setShowModalVariante(true)
 	}
 
-
-
-
-
-
 	return (
 		<>
-			{bundleAtual.length === 0 ? (
-				<p>Carregando...</p>
-			) : (
+			{bundleAtual && (
 
 				<div className="py-16">
 					<div className="text-center font-raj font-bold md:text-8xl text-6xl text-vava m-5">
@@ -154,7 +148,7 @@ const BundlesInfo = () => {
 
 
 					<div className="flex flex-col py-12 justify-center">
-						{bundleAtual.map((weapon: any) => (
+						{bundleAtual.map((weapon) => (
 							<div className="p-5 bg-vava container xl:rounded-xl" key={weapon.uuid}>
 								<img className="xl:h-40 mx-auto mt-6" src={weapon.displayIcon} />
 								<p className="text-center text-black font-fira text-5xl font-semibold mt-2">

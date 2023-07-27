@@ -1,10 +1,12 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Link, useParams } from 'react-router-dom';
 import api from '../axios/config';
 
+import { IMap } from "../@Types/IMap";
+
 const MapasInfo = () => {
 	const { displayName } = useParams();
-	const [mapaAtual, setMapaAtual] = useState<any>([]);
+	const [mapaAtual, setMapaAtual] = useState<IMap | null>(null)
 
 	const getMapaAtual = async () => {
 		try {
@@ -24,16 +26,14 @@ const MapasInfo = () => {
 		getMapaAtual();
 	}, []);
 
-	function filter_map(props: any) {
+	function filter_map(props: IMap) {
 		if (props.displayName === displayName) {
 			return props;
 		}
 	}
 	return (
 		<div className="py-16">
-			{mapaAtual.length === 0 ? (
-				<p>Carregando...</p>
-			) : (
+			{mapaAtual && (
 				<>
 					<div className="text-center font-raj font-bold md:text-8xl text-6xl text-vava uppercase">
 						MAPA {mapaAtual.displayName}
@@ -56,7 +56,7 @@ const MapasInfo = () => {
 
 					<div className='p-5 bg-vava container xl:rounded-xl'>
 						<p className="text-verm font-fira text-5xl font-semibold xl:mb-2 mb-10 mx-2 pb-5 text-center uppercase">LOCAIS DO MAPA</p>
-						{mapaAtual.callouts.map((callouts: any, index: number) => (
+						{mapaAtual.callouts.map((callouts, index) => (
 							<div key={index}>
 								<p className='text-center text-black font-fira text-xl font-semibold mt-2'><strong>{callouts.regionName}</strong> localizado <strong>[{callouts.superRegionName}]</strong></p>
 							</div>

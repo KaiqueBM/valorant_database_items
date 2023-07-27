@@ -1,46 +1,11 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Link, useParams } from 'react-router-dom';
 import api from '../axios/config';
-
-interface Agente{
-  length: number;
-  uuid: string,
-  displayName: string,
-  description: string,
-  developerName: string,
-  characterTags: string,
-  displayIcon: string,
-  displayIconSmall: string,
-  bustPortrait: string,
-  fullPortrait: string,
-  fullPortraitV2: string,
-  killfeedPortrait: string,
-  background: string,
-  backgroundGradientColors: Array<string>,
-  assetPath: string,
-  isFullPortraitRightFacing: boolean,
-  isPlayableCharacter: boolean,
-  isAvailableForTest: boolean,
-  isBaseContent: boolean,
-  role: {
-      uuid: string,
-      displayName: string,
-      description: string,
-      displayIcon: string,
-      assetPath: string,
-  },
-  abilities: [{
-        slot: string,
-        displayName: string,
-        description: string,
-        displayIcon: string,
-  }],
-  voiceline: string[],
-}
+import { IAgente } from '../@Types/IAgente';
 
 const AgenteInfo = () => {
 	const { uuid } = useParams();
-	const [agenteAtual, setAgenteAtual] = useState<any>([]);
+	const [agenteAtual, setAgenteAtual] = useState<IAgente | null>(null);;
 
   const getAgenteAtual = async () => {
     try {
@@ -57,7 +22,7 @@ const AgenteInfo = () => {
     getAgenteAtual();
   }, []);
 
-  function filter_agent(props: Agente) {
+  function filter_agent(props: IAgente) {
     if (props.uuid === uuid) {
       return props;
     }
@@ -67,9 +32,7 @@ const AgenteInfo = () => {
 
   return (
 	<>
-	{agenteAtual.length === 0 ? (
-            <p>Carregando...</p>
-          ) : (
+	{agenteAtual && (
 	
 	<div style={{'backgroundImage': 'linear-gradient(to top right, #'+agenteAtual.backgroundGradientColors[0].substring(0,6)+' ,#'+agenteAtual.backgroundGradientColors[1].substring(0,6)+' ,#'+agenteAtual.backgroundGradientColors[2].substring(0,6)}} className="pt-16" >
       <div className='flex lg:justify-start justify-center'>
@@ -104,7 +67,7 @@ const AgenteInfo = () => {
               </div>
 
               <div className="flex sm:flex-col flex-col w-full sm:justify-between justify-center">
-                {agenteAtual.abilities.map((abilidades: any, index: number) => (
+                {agenteAtual.abilities.map((abilidades, index) => (
                   <div className="m-2 rounded-lg py-2 px-2 transition hover:scale-105" style={{'backgroundColor': '#'+agenteAtual.backgroundGradientColors[1].substring(0,6)}} key={index}>
                     <div className='flex sm:flex-row flex-col items-center'>
                       <div className='w-1/6'><img className="mx-auto w-20 my-4 sm:my-0" src={abilidades.displayIcon} /></div>

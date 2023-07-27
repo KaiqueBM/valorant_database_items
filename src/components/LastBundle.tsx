@@ -3,8 +3,10 @@ import api from "../axios/config";
 import wallpaper from "../assets/wall2.png";
 import { Link } from "react-router-dom";
 
+import { ILastArma } from "../@Types/IArma";
+
 const LastBundle = () => {
-  const [weaponAtual, setWeaponAtual] = useState<any>([]);
+  const [weaponAtual, setWeaponAtual] = useState<ILastArma[] | null>(null);
 
   const getWeaponAtual = async () => {
     try {
@@ -21,7 +23,7 @@ const LastBundle = () => {
     getWeaponAtual();
   }, []);
 
-  function filter_weapon(props: any) {
+  function filter_weapon(props: ILastArma) {
     if (props.themeUuid === "3e8c23b5-47f3-fc77-788a-94852f7a111e") {
       return props;
     }
@@ -36,10 +38,8 @@ const LastBundle = () => {
 
       <div className="flex flex-col py-12 justify-center">
         <div className="grid lg:grid-cols-5 sm:grid-cols-2 grid-cols-1 gap-2 items-end  h-full ">
-          {weaponAtual.length === 0 ? (
-            <p>Carregando...</p>
-          ) : (
-            weaponAtual.map((weapon: any) => (
+          {weaponAtual && (
+            weaponAtual.map((weapon) => (
               <div className="p-5 " key={weapon.uuid}>
                 <img className="h-20 mx-auto" src={weapon.displayIcon} />
                 <p className="text-center text-black font-fira text-xl">

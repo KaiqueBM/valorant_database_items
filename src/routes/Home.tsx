@@ -1,22 +1,11 @@
-import React from "react";
-import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
-import api from "../axios/config";
 import Footer from "../components/Footer";
 import LastAgent from "../components/LastAgent";
 import LastBundle from "../components/LastBundle";
 import LastMap from "../components/LastMap";
-import Rank from "../components/Rank";
 import "../styles/home.css";
 import wallpaper from "../assets/wall3.png";
 
 const Home = () => {
-
-  function filter_weapon(props: any) {
-    if (props.themeUuid === "a547897d-4bd4-7c77-f5e6-55973f0e89ef") {
-      return props;
-    }
-  }
 
   return (
     <>

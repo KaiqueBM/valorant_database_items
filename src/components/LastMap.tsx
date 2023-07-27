@@ -2,8 +2,10 @@ import { useEffect, useState } from "react";
 import api from "../axios/config";
 import { Link } from "react-router-dom";
 
+import { IMap } from "../@Types/IMap";
+
 const LastMap = () => {
-  const [mapaAtual, setMapaAtual] = useState<any>([]);
+  const [mapaAtual, setMapaAtual] = useState<IMap | null>(null);
 
   const getMapaAtual = async () => {
     try {
@@ -11,6 +13,7 @@ const LastMap = () => {
         "/maps/2fe4ed3a-450a-948b-6d6b-e89a78e680a9?language=pt-BR"
       );
       const data = response.data;
+      console.log(data.data)
       setMapaAtual(data.data);
     } catch (error) {
       console.log(error);
@@ -23,9 +26,7 @@ const LastMap = () => {
 
   return (
     <div className="py-16">
-      {mapaAtual.length === 0 ? (
-        <p>Carregando...</p>
-      ) : (
+      {mapaAtual && (
         <>
           <div className="text-center font-raj font-bold md:text-8xl text-6xl text-vava">
             CONHEÇA LOTUS

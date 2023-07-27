@@ -2,8 +2,10 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import api from "../axios/config";
 
+import { IAgente } from '../@Types/IAgente';
+
 const LastAgent = () => {
-  const [agenteAtual, setAgenteAtual] = useState<any>([]);
+  const [agenteAtual, setAgenteAtual] = useState<IAgente | null>(null);
 
   const getAgenteAtual = async () => {
     try {
@@ -30,9 +32,7 @@ const LastAgent = () => {
 
       <div className="flex md:flex-row flex-col flex-wrap justify-center items-center m-10">
         <div className="lg:w-1/3 md:w-1/2">
-          {agenteAtual.length === 0 ? (
-            <p>Carregando...</p>
-          ) : (
+          {agenteAtual && (
             <div className="" key={agenteAtual.uuid}>
               <img
                 src={agenteAtual.background}
@@ -49,9 +49,7 @@ const LastAgent = () => {
           )}
         </div>
         <div className="lg:w-1/2 text-vava font-fira">
-          {agenteAtual.length === 0 ? (
-            <p>Carregando...</p>
-          ) : (
+          {agenteAtual && (
             <>
               <div className="md:text-6xl text-4xl uppercase font-semibold pt-10 flex justify-between">
                 {agenteAtual.displayName}{" "}
