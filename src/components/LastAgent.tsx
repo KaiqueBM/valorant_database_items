@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import api from "../axios/config";
 
@@ -11,6 +11,7 @@ const LastAgent = () => {
         "/agents/cc8b64c8-4b25-4ff9-6e7f-37b4da43d235?language=pt-BR"
       );
       const data = response.data;
+      console.log(data.data)
       setAgenteAtual(data.data);
     } catch (error) {
       console.log(error);

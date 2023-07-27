@@ -1,4 +1,34 @@
-const ArmaVariante = ({ arma }: any) => {
+interface Arma {
+	arma: {
+		uuid: string,
+		displayName: string,
+		themeUuid: string,
+		contentTierUuid: string,
+		displayIcon: string,
+		wallpaper: string,
+		assetPath: string,
+		chromas: [{
+			uuid: string,
+			displayName: string,
+			displayIcon: string,
+			fullRender: string,
+			swatch: string,
+			streamedVideo: string,
+			assetPath: string
+		}],
+		levels: [{
+			uuid: string,
+			displayName: string,
+			levelItem: string,
+			displayIcon: string,
+			streamedVideo: string,
+			assetPath: string
+		}]
+	}
+}
+
+
+const ArmaVariante = ({ arma }: Arma) => {
 	console.log(arma)
 	function formatarTextoVariante(nome: string) {
 		const nomeSplit = nome.split("\n")
@@ -8,7 +38,7 @@ const ArmaVariante = ({ arma }: any) => {
 	return (
 
 		<div className="flex xl:flex-row flex-col">
-			{arma.chromas.map((chromas: any, index: number) => (
+			{arma.chromas.map((chromas, index) => (
 				<div key={index}>
 					{index !== 0 && (
 						<div className="xl:mx-2 mx-10 xl:mb-0 mb-8">

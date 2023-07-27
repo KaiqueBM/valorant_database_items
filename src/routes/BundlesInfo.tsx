@@ -102,7 +102,7 @@ const BundlesInfo = () => {
 
 										</div>
 									</div>
-								</div>
+								</div>R
 							</div>
 							<div className="opacity-75 fixed inset-0 z-40 bg-black"></div>
 						</>
@@ -164,24 +164,24 @@ const BundlesInfo = () => {
 								{weapon.chromas.length > 1 ? (<p className="text-zinc-600 text-center font-fira md:text-2xl text-xl">{weapon.chromas.length} variantes</p>) : (<p className="text-zinc-600 text-center font-fira md:text-2xl text-xl">Sem variantes</p>)}
 
 								<div className="flex justify-center my-5">
-								{weapon.levels.length > 1 && (
-											<button
-												className="mx-2 bg-zinc-800 px-10 py-4 font-raj font-semibold text-2xl rounded-lg hover:bg-verm transition hover:scale-105 text-white duration-150"
-												type="button"
-												onClick={() => chamarModalNivel(weapon)}
-											>
-												Ver níveis
-											</button>
-								)}
-								{weapon.chromas.length > 1 && (
-											<button
-												className="mx-2 bg-zinc-800 px-10 py-4 font-raj font-semibold text-2xl rounded-lg hover:bg-verm transition hover:scale-105 text-white duration-150"
-												type="button"
-												onClick={() => chamarModalVariante(weapon)}
-											>
-												Ver variantes
-											</button>
-								)}
+									{weapon.levels.length > 1 && (
+										<button
+											className="mx-2 bg-zinc-800 px-10 py-4 font-raj font-semibold text-2xl rounded-lg hover:bg-verm transition hover:scale-105 text-white duration-150"
+											type="button"
+											onClick={() => chamarModalNivel(weapon)}
+										>
+											Ver níveis
+										</button>
+									)}
+									{weapon.chromas.length > 1 && (
+										<button
+											className="mx-2 bg-zinc-800 px-10 py-4 font-raj font-semibold text-2xl rounded-lg hover:bg-verm transition hover:scale-105 text-white duration-150"
+											type="button"
+											onClick={() => chamarModalVariante(weapon)}
+										>
+											Ver variantes
+										</button>
+									)}
 								</div>
 							</div>
 

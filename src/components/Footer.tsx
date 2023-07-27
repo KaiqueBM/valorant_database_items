@@ -1,12 +1,22 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import api from '../axios/config';
 import wallpaper from "../assets/wall2.png";
 import dayjs from 'dayjs'
 
+interface Season{ 
+  uuid: string,
+  displayName: string,
+  type: string,
+  startTime: string,
+  endTime: string,
+  parentUuid: string,
+  assetPath: string
+}
+
 const Footer = () => {
 
   const [versionAtual, setVersionAtual] = useState<any>([]);
-  const [seasons, setSeasons] = useState<any>([]);
+  const [seasons, setSeasons] = useState<Season[]>([]);
 
   const getVersionAtual = async () => {
     try {
@@ -28,7 +38,7 @@ const Footer = () => {
     getVersionAtual();
   }, []);
 
-  function filter_seasons(season: any) {
+  function filter_seasons(season: Season) {
     if ((season.displayName === "EPISÓDIO 5") || (season.uuid === "34093c29-4306-43de-452f-3f944bde22be")) {
       return season;
     }
