@@ -16,6 +16,7 @@ import './index.css'
 import Agentes from './routes/Agentes';
 import AgenteInfo from './routes/AgenteInfo';
 import BundlesInfo from './routes/BundlesInfo';
+import MapasInfo from './routes/MapasInfo';
 
 const router = createBrowserRouter([
   {
@@ -56,6 +57,10 @@ const router = createBrowserRouter([
       {
         path: "/bundles/:uuid",
         element: <BundlesInfo />
+      },
+      {
+        path: "/mapas/:displayName",
+        element: <MapasInfo />
       }
     ]
   }

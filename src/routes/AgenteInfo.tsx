@@ -51,7 +51,7 @@ const AgenteInfo = () => {
             <div className="" key={agenteAtual.uuid}>
               <div className="relative">
                 <img
-                  className=""
+                  className="transition hover:scale-105"
                   src={agenteAtual.bustPortrait}
                 />
               </div>
@@ -59,11 +59,11 @@ const AgenteInfo = () => {
         </div>
         <div className="lg:w-1/2 text-vava font-fira z-10 p-5">
               <div className="md:text-9xl text-4xl uppercase font-bold pt-10 flex justify-between">
-              <span className='border-b-4 rounded-b font-raj'>{agenteAtual.displayName}</span>
+              <span className='border-b-4 rounded-b font-raj transition hover:scale-105'>{agenteAtual.displayName}</span>
               </div>
               <div className="md:text-6xl text-4xl uppercase font-semibold pt-10 flex justify-between">
                 {agenteAtual.role.displayName}
-                <img className="md:h-14 h-10" src={agenteAtual.role.displayIcon} />
+                <img className="md:h-14 h-10 transition hover:scale-105" src={agenteAtual.role.displayIcon} />
               </div>
               
               <div className="md:text-2xl text-xl text-justify pt-10 pb-10">
@@ -72,7 +72,7 @@ const AgenteInfo = () => {
 
               <div className="flex sm:flex-col flex-col w-full sm:justify-between justify-center">
                 {agenteAtual.abilities.map((abilidades: any, index: any) => (
-                  <div className="m-2 rounded-lg py-2 px-2" style={{'backgroundColor': '#'+agenteAtual.backgroundGradientColors[1].substring(0,6)}} key={index}>
+                  <div className="m-2 rounded-lg py-2 px-2 transition hover:scale-105" style={{'backgroundColor': '#'+agenteAtual.backgroundGradientColors[1].substring(0,6)}} key={index}>
                     <div className='flex sm:flex-row flex-col items-center'>
                       <div className='w-1/6'><img className="mx-auto w-20 my-4 sm:my-0" src={abilidades.displayIcon} /></div>
                       <div className='flex flex-col sm:w-5/6 sm:pr-5 px-2 sm:px-0'>
@@ -93,7 +93,7 @@ const AgenteInfo = () => {
               </div>
               <div className="flex flex-row flex-wrap justify-center pb-28 lg:mt-0 mt-18">
               <Link to={`/agentes`}>
-          <button className="bg-vava mt-20 px-10 py-4 font-raj font-semibold text-2xl rounded-lg text-black">
+          <button className="bg-vava px-10 py-4 font-raj font-semibold text-2xl rounded-lg hover:text-white hover:bg-verm transition hover:scale-105 text-black mt-20">
             OUTROS AGENTES
           </button>
           </Link>

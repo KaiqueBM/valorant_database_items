@@ -1,7 +1,7 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import axios from "axios";
+import api from "../axios/config";
 
 
 const Mapas = () => {
@@ -10,7 +10,7 @@ const Mapas = () => {
 
     const getNapas = async () => {
         try {
-            const response = await axios.get("https://valorant-api.com/v1/maps")
+            const response = await api.get("/maps?language=pt-BR");
             const data = response.data;
             console.log(data.data)
             setNapas(data.data)
@@ -32,9 +32,12 @@ const Mapas = () => {
             <div className="flex flex-row flex-wrap justify-center w-full ">
                 {mapas.length === 0 ? (<p>Carregando...</p>) : (
                     mapas.map((mapa: { uuid: string, displayName: string, splash: string, coordinates: string }) => (
+                        
                         <div className="m-5 bg-vava border-b-4 border-verm rounded-xl sm:w-5/12 w-5/6 transition hover:-translate-y-3 duration-500 cursor-pointer" key={mapa.uuid}>
+                           <Link to={`/mapas/${mapa.displayName}`} >
                             <img className="rounded-t-lg" src={mapa.splash} />
                             <p className="text-center pb-2 pt-2 text-verm font-fira"><span className="lg:text-4xl text-2xl uppercase font-bold">{mapa.displayName}</span> <span className="text-center md:text-xl text-base mb-3"> - {mapa.coordinates}</span></p>
+                            </Link>
                         </div>
                     ))
                 )}

@@ -28,7 +28,7 @@ const LastBundle = () => {
   }
   return (
     <div className="bg-vava py-16" style={{'backgroundImage': 'url('+wallpaper+')'}}>
-      <div className="text-center font-raj font-bold md:text-8xl text-6xl text-verm">
+      <div className="text-center font-raj font-bold sm:text-8xl text-7xl text-verm">
         LOJA ATUAL
       </div>
 
