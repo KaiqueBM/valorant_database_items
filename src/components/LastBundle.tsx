@@ -29,16 +29,21 @@ const LastBundle = () => {
     }
   }
   return (
-    <div className="bg-vava py-16" style={{'backgroundImage': 'url('+wallpaper+')'}}>
+    <div
+      className="bg-vava py-16"
+      style={{ backgroundImage: "url(" + wallpaper + ")" }}
+    >
       <div className="text-center font-raj font-bold sm:text-8xl text-7xl text-verm">
         LOJA ATUAL
       </div>
 
-      <p className='md:text-4xl text-3xl text-zinc-900 text-center font-extrabold mt-5'>Bundle Neo Oeste</p>
+      <p className="md:text-4xl text-3xl text-zinc-900 text-center font-extrabold mt-5">
+        Bundle Neo Oeste
+      </p>
 
       <div className="flex flex-col py-12 justify-center">
         <div className="grid lg:grid-cols-5 sm:grid-cols-2 grid-cols-1 gap-2 items-end  h-full ">
-          {weaponAtual && (
+          {weaponAtual &&
             weaponAtual.map((weapon) => (
               <div className="p-5 " key={weapon.uuid}>
                 <img className="h-20 mx-auto" src={weapon.displayIcon} />
@@ -46,14 +51,13 @@ const LastBundle = () => {
                   {weapon.displayName}
                 </p>
               </div>
-            ))
-          )}
+            ))}
         </div>
         <div className="mx-auto mt-2 pt-12">
-        <Link to={`/bundles`}>
-          <button className="bg-zinc-800 px-10 py-4 font-raj font-semibold text-2xl rounded-lg hover:bg-verm transition hover:scale-105 text-white">
-            VER OUTROS BUNDLES
-          </button>
+          <Link to={`/bundles`}>
+            <button className="bg-zinc-800 px-10 py-4 font-raj font-semibold text-2xl rounded-lg hover:bg-verm transition hover:scale-105 text-white">
+              VER OUTROS BUNDLES
+            </button>
           </Link>
         </div>
       </div>

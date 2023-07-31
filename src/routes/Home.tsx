@@ -6,7 +6,6 @@ import "../styles/home.css";
 import wallpaper from "../assets/wall3.png";
 
 const Home = () => {
-
   return (
     <>
       <div className="home relative">
@@ -15,7 +14,9 @@ const Home = () => {
           <span className="text-vava font-raj font-bold md:text-9xl sm:text-7xl text-6xl block">
             VALORANT
           </span>
-          <span className="text-vava font-fira md:text-3xl text-2xl">DATABASE</span>
+          <span className="text-vava font-fira md:text-3xl text-2xl">
+            DATABASE
+          </span>
         </div>
       </div>
 

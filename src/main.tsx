@@ -1,22 +1,22 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import App from './App'
+import React from "react";
+import ReactDOM from "react-dom/client";
+import App from "./App";
 
-import {createBrowserRouter, RouterProvider, Route} from "react-router-dom";
+import { createBrowserRouter, RouterProvider, Route } from "react-router-dom";
 
 import Home from "./routes/Home";
-import Sprays from './routes/Sprays'
-import Mapas from './routes/Mapas';
-import Bundles from './routes/Bundles'
-import Cards from './routes/Cards';
-import Chaveiros from './routes/Chaveiros';
+import Sprays from "./routes/Sprays";
+import Mapas from "./routes/Mapas";
+import Bundles from "./routes/Bundles";
+import Cards from "./routes/Cards";
+import Chaveiros from "./routes/Chaveiros";
 
-import './styles/index.css'
-import './index.css'
-import Agentes from './routes/Agentes';
-import AgenteInfo from './routes/AgenteInfo';
-import BundlesInfo from './routes/BundlesInfo';
-import MapasInfo from './routes/MapasInfo';
+import "./styles/index.css";
+import "./index.css";
+import Agentes from "./routes/Agentes";
+import AgenteInfo from "./routes/AgenteInfo";
+import BundlesInfo from "./routes/BundlesInfo";
+import MapasInfo from "./routes/MapasInfo";
 
 const router = createBrowserRouter([
   {
@@ -24,51 +24,50 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <Home />
+        element: <Home />,
       },
       {
         path: "/sprays",
-        element: <Sprays />
+        element: <Sprays />,
       },
       {
         path: "/mapas",
-        element: <Mapas />
+        element: <Mapas />,
       },
       {
         path: "/bundles",
-        element: <Bundles />
+        element: <Bundles />,
       },
       {
         path: "/chaveiros",
-        element: <Chaveiros />
+        element: <Chaveiros />,
       },
       {
         path: "/cards",
-        element: <Cards />
+        element: <Cards />,
       },
       {
         path: "/agentes",
-        element: <Agentes />
+        element: <Agentes />,
       },
       {
         path: "/agentes/:uuid",
-        element: <AgenteInfo />
+        element: <AgenteInfo />,
       },
       {
         path: "/bundles/:uuid",
-        element: <BundlesInfo />
+        element: <BundlesInfo />,
       },
       {
         path: "/mapas/:displayName",
-        element: <MapasInfo />
-      }
-    ]
-  }
-])
+        element: <MapasInfo />,
+      },
+    ],
+  },
+]);
 
-
-ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
+ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <React.StrictMode>
     <RouterProvider router={router} />
-  </React.StrictMode>,
-)
+  </React.StrictMode>
+);

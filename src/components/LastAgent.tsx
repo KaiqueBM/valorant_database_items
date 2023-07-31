@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import api from "../axios/config";
 
-import { IAgente } from '../@Types/IAgente';
+import { IAgente } from "../@Types/IAgente";
 
 const LastAgent = () => {
   const [agenteAtual, setAgenteAtual] = useState<IAgente | null>(null);
@@ -13,7 +13,7 @@ const LastAgent = () => {
         "/agents/cc8b64c8-4b25-4ff9-6e7f-37b4da43d235?language=pt-BR"
       );
       const data = response.data;
-      console.log(data.data)
+      console.log(data.data);
       setAgenteAtual(data.data);
     } catch (error) {
       console.log(error);
@@ -53,7 +53,10 @@ const LastAgent = () => {
             <>
               <div className="md:text-6xl text-4xl uppercase font-semibold pt-10 flex justify-between">
                 {agenteAtual.displayName}{" "}
-                <img className="md:h-14 h-10" src={agenteAtual.role.displayIcon} />
+                <img
+                  className="md:h-14 h-10"
+                  src={agenteAtual.role.displayIcon}
+                />
               </div>
               <div className="md:text-2xl text-xl text-justify pt-10">
                 {agenteAtual.description}
@@ -76,8 +79,8 @@ const LastAgent = () => {
           <button className="bg-vava px-10 py-4 font-raj font-semibold text-2xl rounded-lg text-black hover:text-white hover:bg-verm transition hover:scale-105">
             VER MAIS AGENTES
           </button>
-          </Link>
-        </div>
+        </Link>
+      </div>
     </div>
   );
 };
