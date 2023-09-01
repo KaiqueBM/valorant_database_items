@@ -24,7 +24,7 @@ const LastBundle = () => {
   }, []);
 
   function filter_weapon(props: ILastArma) {
-    if (props.themeUuid === "3e8c23b5-47f3-fc77-788a-94852f7a111e") {
+    if (props.themeUuid === "c1f88e2b-4aad-d84c-eb8f-b3a103b5eb65") {
       return props;
     }
   }
@@ -38,7 +38,7 @@ const LastBundle = () => {
       </div>
 
       <p className="md:text-4xl text-3xl text-zinc-900 text-center font-extrabold mt-5">
-        Bundle Neo Oeste
+        Bundle Imperium
       </p>
 
       <div className="flex flex-col py-12 justify-center">

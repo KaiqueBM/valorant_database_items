@@ -10,7 +10,7 @@ const LastMap = () => {
   const getMapaAtual = async () => {
     try {
       const response = await api.get(
-        "/maps/2fe4ed3a-450a-948b-6d6b-e89a78e680a9?language=pt-BR"
+        "/maps/92584fbe-486a-b1b2-9faa-39b0f486b498?language=pt-BR"
       );
       const data = response.data;
       console.log(data.data);
@@ -29,7 +29,7 @@ const LastMap = () => {
       {mapaAtual && (
         <>
           <div className="text-center font-raj font-bold md:text-8xl text-6xl text-vava">
-            CONHEÇA LOTUS
+            CONHEÇA SUNSET
           </div>
 
           <div className="grid lg:grid-cols-2 items-center">
@@ -39,10 +39,14 @@ const LastMap = () => {
 
             <div className="md:text-2xl text-xl text-center lg:py-10 px-10 text-vava font-fira">
               <p>
-                Nas florestas exuberantes da Índia, existe um lugar onde
-                plantas, arquitetura e tecnologia entram em harmonia para
-                amplificar a energia do sol. E não, não estamos falando de um
-                laboratório de energia sustentável, mas de uma ruína ancestral.
+                Sunset é um dos mapas mais tradicionais do VALORANT, com dois
+                locais e três faixas. Sua única característica adicional é uma
+                porta mecânica encontrada entre o B Market e o Mid Courtyard. Os
+                jogadores podem usar um interruptor no lado do mercado da porta
+                para fechá-lo ou abri-lo. Esta porta é impenetrável enquanto
+                fechada, mas tem 500 HP, permitindo que os jogadores danifiquem
+                e acabem destruindo-o. Uma vez destruída, a porta permanece
+                permanentemente aberta pelo resto da rodada.
               </p>
               <hr className="mt-5"></hr>
               <img className="mx-auto mt-8 rounded-lg" src={mapaAtual.splash} />
